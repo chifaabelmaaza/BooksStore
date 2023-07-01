@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./User
+      dockerfile: dockerfile
+    ports:
+      - 3000:3000
+
+  backend:
+    build:
+      context: ./Api
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
