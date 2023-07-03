@@ -4,12 +4,16 @@ services:
     build:
       context: ./User
       dockerfile: dockerfile
+    container_name: react-container
     ports:
       - 3000:3000
+    
 
   backend:
     build:
       context: ./Api
       dockerfile: Dockerfile
+    container_name: node-container
     ports:
       - 3001:3001
+    
